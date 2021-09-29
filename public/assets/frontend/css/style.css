@@ -1,0 +1,152 @@
+:root {
+    --text-color: #262627;
+    --heading-color: #121213;
+    --link-color: rgb(187, 74, 3);
+    --link-hover-color: rgb(231, 91, 4);
+}
+/* GENERAL STYLES */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    font-family: inherit;
+    line-height: inherit;
+    background-color: #f7f8fc;
+    -webkit-font-smoothing: antialiased;
+}
+
+:focus {
+    outline: 0;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -o-box-shadow: none !important
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    color: var(--heading-color);
+    margin-bottom: 33px;
+}
+
+h1 {
+    font-size: 2.7rem;
+    font-weight: 800;
+    line-height: 3.8rem;
+}
+
+h2 {
+    font-size: 2.3rem;
+    font-weight: 800;
+    line-height: 3.2rem;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 3rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 2.8rem;
+}
+
+h5 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 2.7rem;
+}
+
+h6 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 2.6rem;
+}
+
+
+p {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: var(--text-color);
+}
+
+a {
+    font-family: inherit;
+    transition: all 0.2s ease-in-out 0s;
+    color: var(--link-color);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+a:focus {
+    outline: 0
+}
+
+ul li, ol li {
+    font-size: .9rem;
+    line-height: 1.8rem;
+}
+
+.wrapper {
+    min-height: 100vh !important; /* force footer to bottom */
+    display: flex; /* force footer to bottom */
+    flex-direction: column; /* force footer to bottom */
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+/* BOOTSTRAP FORM OVERRIDE */
+
+.form-control:focus, btn:focus {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -o-box-shadow: none !important
+}
+
+
+/* FOOTER STYLES */
+
+footer {
+    margin-top: auto; /* force footer to bottom */
+}
+
+.footer {
+    background-color: rgb(58, 57, 57);
+    color:floralwhite;
+    min-height: 100px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.copyright {
+    background-color: rgb(41, 40, 40);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.copyright p {
+    font-size: .75rem;
+    color: #cfcfcf;
+    margin-bottom: 0;
+}
+
