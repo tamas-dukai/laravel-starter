@@ -11,6 +11,12 @@
   box-sizing: border-box;
 }
 
+::placeholder {
+    font-size: .8rem;
+    font-style: italic;
+    color:rgba(58, 57, 57, 0.39);
+}
+
 html {
     font-family: 'Open Sans', sans-serif;
     font-size: 100%;
@@ -163,12 +169,6 @@ ul li, ol li {
 
 .form-control {
     border-radius: 0;
-}
-
-.form-control::placeholder {
-    font-size: .8rem;
-    font-style: italic;
-    color:rgba(58, 57, 57, 0.39);
 }
 
 
