@@ -4,7 +4,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Admin Language Lines
+    | Member Language Lines
     |--------------------------------------------------------------------------
     |
     | The following language lines are used the admin panel for various
@@ -13,6 +13,6 @@ return [
     |
     */
 
-    'dashboard' => 'Admin Dashboard',
+    'dashboard' => 'Member Dashboard',
 
 ];
