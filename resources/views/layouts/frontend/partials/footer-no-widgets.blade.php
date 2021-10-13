@@ -18,7 +18,6 @@
 <script src="{{ asset('public/assets/backend/vendors/jquery/jquery.min.js') }}"></script>
 <script src="{{ asset('public/assets/frontend/vendors/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
-
 @stack('js')
 
 </body>

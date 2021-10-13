@@ -20,3 +20,5 @@ Route::get('/', function () {
 
 Route::get('admin', 'App\Http\Controllers\Admin\DashboardController@index')->name('admin.dashboard');
 //Route::get('/admin', [Admin\DashboardController::class, 'index']);
+
+Route::view('home', 'member/index')->middleware('auth');
