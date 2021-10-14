@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-//use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Member\MemberController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +19,32 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('admin', 'App\Http\Controllers\Admin\DashboardController@index')->name('admin.dashboard');
-//Route::get('/admin', [Admin\DashboardController::class, 'index']);
+
+// Routes for Admin group
+Route::group([
+    'as'=>'admin.',
+    'prefix'=>'admin',
+    'namespace'=>'Admin',
+    'middleware' => ['auth', 'admin']],
+
+    function() {
+
+        Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+
+    }
+);
+
+
+// Routes for members
+Route::group([
+    'as'=>'member.',
+    'prefix'=>'member',
+    'namespace'=>'Member',
+    'middleware' => ['auth']],
+
+    function() {
+        
+        Route::get('dashboard', [MemberController::class, 'index'])->name('dashboard');
+        
+    }
+);

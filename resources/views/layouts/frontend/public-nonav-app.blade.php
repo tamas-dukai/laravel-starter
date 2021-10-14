@@ -1,5 +1,6 @@
 @include('layouts.frontend.partials.head')
 
+<div class="wrapper">
     @yield('content')
 
 
