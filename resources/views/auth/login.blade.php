@@ -1,6 +1,5 @@
 @extends('layouts.frontend.public-app')
 
-
 @push('css')
     <link href="{{ asset('public/assets/frontend/css/auth.css') }}" rel="stylesheet">
 @endpush
@@ -55,13 +54,13 @@
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                     <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
+                                        {{ __('auth.remember_me') }}
                                     </label>
                                 </div>
                                 <div class="forgot_password">
                                     @if (Route::has('password.request'))
                                     <a href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
+                                        {{ __('auth.forgot_pass') }}
                                     </a>
                                 @endif
                                 </div>
@@ -70,7 +69,7 @@
                             <hr>
 
                             <div class="not-member">
-                                <p>Not a member? <a href="{{ route('register') }}">Create an account!</a></p>
+                                <p>{{ __('auth.not_member_yet') }} <a href="{{ route('register') }}">{{ __('auth.create_account') }}</a></p>
                             </div>
 
 

@@ -16,8 +16,9 @@
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    max-width: 55%;
+    max-width: 50%;
     margin-top: 90px;
+    margin-bottom: 30px;
 } 
 
 
@@ -47,6 +48,11 @@
     padding-top: 6px;
     padding-bottom: 6px;
     
+}
+
+.submit-btn:hover {
+    background-color: var(--link-hover-color);
+    transition: all 0.3s ease;
 }
 
 .submit-btn .btn {

@@ -17,14 +17,8 @@
                      <img src="{{ asset('public/assets/frontend/images/close.svg') }}" alt="Close menu">
                  </div>
                  <ul class="menu">
-                     <li class="menu-item with-dropdown">
-                         <a href="{{ url('/') }}" data-toggle="sub-menu">Home <i class="fas fa-chevron-down"></i></a>
-                         <ul class="sub-menu">
-                            <li class="menu-item"><a href="#">Webdesign</a></li>
-                            <li class="menu-item"><a href="#">Webhosting</a></li>
-                            <li class="menu-item"><a href="#">Online Marketing</a></li>
-                            <li class="menu-item"><a href="#">SEO</a></li>
-                        </ul>
+                     <li class="menu-item">
+                         <a href="{{ url('/') }}" data-toggle="sub-menu">Home</i></a>
                      </li>
                      <li class="menu-item">
                         <a href="#">About</a>

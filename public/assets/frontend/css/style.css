@@ -139,6 +139,7 @@ a {
 
 a:hover {
     color: var(--link-hover-color);
+    transition: all 0.3s ease;
 }
 
 a:focus {
