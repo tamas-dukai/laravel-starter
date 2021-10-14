@@ -154,9 +154,8 @@ ul li, ol li {
     min-height: 100vh !important; /* force footer to bottom */
     display: flex; /* force footer to bottom */
     flex-direction: column; /* force footer to bottom */
-    padding-top: 35px;
-    padding-bottom: 35px;
-    margin-top: 150px;
+    padding-top: 120px;
+    padding-bottom: 30px;
 }
 
 /* BOOTSTRAP FORM OVERRIDE */

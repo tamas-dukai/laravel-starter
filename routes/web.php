@@ -45,5 +45,6 @@ Route::group([
     function() {
         
         Route::get('dashboard', [MemberController::class, 'index'])->name('dashboard');
+        
     }
 );

@@ -18,7 +18,7 @@
                  </div>
                  <ul class="menu">
                      <li class="menu-item with-dropdown">
-                         <a href="#" data-toggle="sub-menu">Home <i class="fas fa-chevron-down"></i></a>
+                         <a href="{{ url('/') }}" data-toggle="sub-menu">Home <i class="fas fa-chevron-down"></i></a>
                          <ul class="sub-menu">
                             <li class="menu-item"><a href="#">Webdesign</a></li>
                             <li class="menu-item"><a href="#">Webhosting</a></li>
