@@ -1,55 +1,62 @@
-<header>
+<header class="header">
 
-    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name', 'Laravel') }}
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <div class="container">
+        <div class="header-main">
+            <div class="logo">
+                <a href="#">Logo</a>
+            </div>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- Left Side Of Navbar -->
-                <ul class="navbar-nav mr-auto">
+            <div class="mobile-menu-toggle">
+                <span></span>
+            </div>
+            <div class="menu-overlay"></div>
 
-                </ul>
-
-                <!-- Right Side Of Navbar -->
-                <ul class="navbar-nav ml-auto">
-                    <!-- Authentication Links -->
-                    @guest
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                        </li>
-                        @if (Route::has('register'))
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                            </li>
-                        @endif
-                    @else
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }}
-                            </a>
-                        </li>
-
-                        <li class="nav-item">  
-                            <a href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                                                document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                            </a>
-
+             <!-- Nav menu starts -->
+             <nav class="nav-menu">
+                 <div class="close-mobile-menu">
+                     <img src="{{ asset('public/assets/frontend/images/close.svg') }}" alt="Close menu">
+                 </div>
+                 <ul class="menu">
+                     <li class="menu-item with-dropdown">
+                         <a href="#" data-toggle="sub-menu">Home <i class="fas fa-chevron-down"></i></a>
+                         <ul class="sub-menu">
+                            <li class="menu-item"><a href="#">Webdesign</a></li>
+                            <li class="menu-item"><a href="#">Webhosting</a></li>
+                            <li class="menu-item"><a href="#">Online Marketing</a></li>
+                            <li class="menu-item"><a href="#">SEO</a></li>
+                        </ul>
+                     </li>
+                     <li class="menu-item">
+                        <a href="#">About</a>
+                    </li>
+                    <li class="menu-item with-dropdown">
+                        <a href="#" data-toggle="sub-menu">Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="#">Webdesign</a></li>
+                            <li class="menu-item"><a href="#">Webhosting</a></li>
+                            <li class="menu-item"><a href="#">Online Marketing</a></li>
+                            <li class="menu-item"><a href="#">SEO</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">Pages</a>
+                    </li>
+                    <li class="menu-item">
+                        @guest
+                            <a href="{{ route('login') }}">Sign in</a>
+                        @else 
+                            <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">Logout</a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf
                             </form>
-                        </li>
-                    @endguest
-                </ul>
-            </div>
+                        @endguest
+                    </li>
+                 </ul>
+             </nav>
+             <!-- Nav menu ends -->
         </div>
-    </nav>
+    </div>
 
 </header>
 
