@@ -1,62 +1,59 @@
-@extends('layouts.frontend.auth-app')
+@extends('layouts.frontend.public-app')
 
-@php
-    $meta_title = "Password Reset";
-    $meta_description = "Did you forget your password? Set a new one here.";
-@endphp
+
 
 @push('css')
-    <link href="{{ asset('public/assets/frontend/css/auth/login.css') }}" rel="stylesheet">
+<link href="{{ asset('public/assets/frontend/css/auth.css') }}" rel="stylesheet">
 @endpush
 
 @section('content')
-<div class="container-fluid login-page">
-<div class="container">
-<div class="row login-logo">
-            <div class="col-md-12">
-                <a href="{{ route('home') }}"><img src="{{ asset('public/assets/frontend/images/logo.png') }}" alt="Sonic Learning Management System"></a>
-            </div>
-        </div>
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-            <h3 class="form-header">Reset your password</h3>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
+<div class="auth-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                
+                <div class="auth-form-wrapper">
+                    <div class="auth-form-header">
+                        <div class="auth-form-header-icon d-flex justify-content-center">
+                            <i class="fas fa-unlock-alt"></i>
                         </div>
-                    @endif
+                        <div class="auth-form-header-text">
+                            <h1>{{ __('auth.reset_pass') }}</h1>
+                            <p>{{ __('auth.reset_pass_desc') }}</p>
+                        </div>
+                    </div>
 
-                    <form method="POST" action="{{ route('password.email') }}">
-                        @csrf
+                    <div class="auth-form">
+                        <form method="POST" action="{{ route('password.email') }}">
+                            @csrf
 
-                        <div class="form-group">
-
-                            <div class="col-md-12">
-                                <input id="email" type="email" placeholder="Enter your email address..." class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
+                            <div class="mb-3">
+                                
+                                <input id="email" type="email" class="form-control form-control-lg @error('email') is-invalid @enderror" name="email" placeholder="{{ __('auth.email_placeholder') }}" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
-                        </div>
 
-                        <div class="form-group mb-0">
-                            <div class="col-md-6">
-                                <button type="submit" class="btn default-btn">
-                                    {{ __('Send Password Reset Link') }}
-                                </button>
+                            
+
+                            <div class="submit-btn mb-5">
+                                <button type="submit" id="submit" class="btn col-12">{{ __('auth.send_password_reset_link') }}</button>
                             </div>
-                        </div>
-                    </form>
+
+                        </form>
+                    </div>
                 </div>
             </div>
+            
         </div>
     </div>
-    </div>
 </div>
+
 @endsection
+
+@push('js')
+
+@endpush
