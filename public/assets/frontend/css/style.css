@@ -31,10 +31,19 @@ body {
     line-height: inherit;
     background-color: #f7f8fc;
     -webkit-font-smoothing: antialiased;
+    padding-top: 100px;
 }
 
 body.hidden-scrolling {
     overflow-y: hidden;
+}
+
+.wrapper {
+    min-height: 100vh !important; /* force footer to bottom */
+    display: flex; /* force footer to bottom */
+    flex-direction: column; /* force footer to bottom */
+    /*padding-top: 120px;
+    padding-bottom: 30px;*/
 }
 
 :focus {
@@ -151,13 +160,6 @@ ul li, ol li {
     line-height: 1.8rem;
 }
 
-.wrapper {
-    min-height: 100vh !important; /* force footer to bottom */
-    display: flex; /* force footer to bottom */
-    flex-direction: column; /* force footer to bottom */
-    padding-top: 120px;
-    padding-bottom: 30px;
-}
 
 /* BOOTSTRAP FORM OVERRIDE */
 
@@ -186,7 +188,7 @@ ul li, ol li {
     width: 100%;
     left: 0;
     top: 0;
-    padding: 15px;
+    padding: 5px;
     box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.05);
     z-index: 99;
 }
@@ -196,7 +198,7 @@ ul li, ol li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    padding: 5px 0;
 }
 
 .header .logo {
@@ -216,6 +218,12 @@ nav ul {
     padding: 0;
 } 
 
+.header .menu > .nav-divider {
+    height: 2rem;
+    border-left: 0.1rem solid rgba(0,34,28,.1);
+    top: .7rem;
+}
+
 .header .nav-menu {
     padding: 0 15px;
 }
@@ -229,7 +237,7 @@ nav ul {
 .header .menu > .menu-item > a {
     display: block;
     padding: 12px 0;
-    font-size: 1.125rem;
+    font-size: 1rem;
     color: #000000;
     text-transform: capitalize;
     font-weight: 600;
@@ -429,8 +437,6 @@ nav ul {
         display: flex;
     }
 }
-
-
 
 
 
