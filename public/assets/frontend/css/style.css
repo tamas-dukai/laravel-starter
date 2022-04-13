@@ -31,20 +31,21 @@ body {
     line-height: inherit;
     background-color: #f7f8fc;
     -webkit-font-smoothing: antialiased;
-    padding-top: 100px;
+    /*padding-top: 73px;*/
 }
 
-body.hidden-scrolling {
-    overflow-y: hidden;
+section {
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
-.wrapper {
+/*.wrapper {
     min-height: 100vh !important; /* force footer to bottom */
-    display: flex; /* force footer to bottom */
-    flex-direction: column; /* force footer to bottom */
+    /*display: flex; /* force footer to bottom */
+    /*flex-direction: column; /* force footer to bottom */
     /*padding-top: 120px;
     padding-bottom: 30px;*/
-}
+/*}*/
 
 :focus {
     outline: 0;
@@ -177,6 +178,7 @@ ul li, ol li {
 
 .form-control {
     border-radius: 0;
+    font-size: 0.9rem;
 }
 
 

@@ -6,6 +6,7 @@
 
     @section('content')
 
+    <section style="background-color: orange; margin-top: 74px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -67,6 +68,7 @@
                 </div>
             </div>
         </div>
+    </section>
 
     @endsection
 
