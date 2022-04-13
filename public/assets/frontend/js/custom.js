@@ -64,3 +64,12 @@
     });
   
   })();
+
+
+  // COOKIE WARNING //
+  document.addEventListener('DOMContentLoaded', function () {
+    var gdprCookieLaw = new GDPRCookieLaw({
+        moreLinkHref: 'http://your-domain.com/privacy-policy'
+    });
+    gdprCookieLaw.init();
+});
