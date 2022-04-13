@@ -47,7 +47,7 @@
                                     <button type="submit" id="submit" class="btn col-12">{{ __('auth.sign_in') }}</button>
                                 </div>
 
-                                <div class="bottom-options d-flex justify-content-between mb-5">
+                                <div class="bottom-options d-flex justify-content-between mb-3">
                                     <div class="remember_me">
                                         <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
