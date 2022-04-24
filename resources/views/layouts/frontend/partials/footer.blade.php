@@ -1,4 +1,4 @@
-</div> <!-- End .wrapper -->
+
     <footer>
 
         <div class="footer">
@@ -47,6 +47,7 @@
 
 <script src="{{ asset('public/assets/backend/vendors/jquery/jquery.min.js') }}"></script>
 <script src="{{ asset('public/assets/frontend/vendors/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('public/assets/frontend/js/gdpr-cookie-law.min.js') }}"></script>
 <script src="{{ asset('public/assets/frontend/js/custom.js') }}"></script>
 @stack('js')
 

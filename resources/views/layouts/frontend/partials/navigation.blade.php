@@ -1,26 +1,25 @@
 <header class="header">
 
-    <div class="container">
-        <div class="header-main">
-            <div class="logo">
-                <a href="#">Logo</a>
-            </div>
+    <div class="header-main container">
+        <div class="logo">
+            <a href="#">Logo</a>
+        </div>
 
-            <div class="mobile-menu-toggle">
-                <span></span>
-            </div>
-            <div class="menu-overlay"></div>
+        <div class="mobile-menu-toggle">
+            <span></span>
+        </div>
+        <div class="menu-overlay"></div>
 
-             <!-- Nav menu starts -->
-             <nav class="nav-menu">
-                 <div class="close-mobile-menu">
-                     <img src="{{ asset('public/assets/frontend/images/close.svg') }}" alt="Close menu">
-                 </div>
-                 <ul class="menu">
-                     <li class="menu-item">
-                         <a href="{{ url('/') }}" data-toggle="sub-menu">Home</i></a>
-                     </li>
-                     <li class="menu-item">
+            <!-- Nav menu starts -->
+            <nav class="nav-menu">
+                <div class="close-mobile-menu">
+                    <img src="{{ asset('public/assets/frontend/images/close.svg') }}" alt="Close menu">
+                </div>
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="{{ url('/') }}" data-toggle="sub-menu">Home</i></a>
+                    </li>
+                    <li class="menu-item">
                         <a href="#">About</a>
                     </li>
                     <li class="menu-item with-dropdown">
@@ -35,9 +34,12 @@
                     <li class="menu-item">
                         <a href="#">Pages</a>
                     </li>
+
+                    <li class="menu-item nav-divider"></li>
+
                     <li class="menu-item">
                         @guest
-                            <a href="{{ route('login') }}">Sign in</a>
+                        <a href="{{ route('login') }}"><i class="fas fa-sign-in-alt"></i> Sign in</a>
                         @else 
                             <a href="{{ route('logout') }}" onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">Logout</a>
@@ -46,12 +48,11 @@
                             </form>
                         @endguest
                     </li>
-                 </ul>
-             </nav>
-             <!-- Nav menu ends -->
-        </div>
+                </ul>
+            </nav>
+            <!-- Nav menu ends -->
     </div>
 
 </header>
 
-<div class="wrapper">
+

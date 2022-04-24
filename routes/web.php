@@ -16,7 +16,9 @@ use App\Http\Controllers\Member\MemberController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $meta_title = "Page meta title";
+    $meta_description = "Page meta description";
+    return view('welcome', compact('meta_title', 'meta_description'));
 });
 
 
