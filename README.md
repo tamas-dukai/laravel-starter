@@ -16,4 +16,6 @@ All necessary css, image, js files can be found in the 'public/assets/ folder.
 ## How to set up:
 
 - Clone the repository
-- run 'composer install' in terminal
+- Create a .env file with database connection details
+- Generate new APP_KEY with the following command in terminal 'php artisan key:generate'
+- Run 'composer install' in terminal
